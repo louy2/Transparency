@@ -3,8 +3,8 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "css"
-sass_dir = "sass"
-images_dir = "img"
+sass_dir = "css"
+images_dir = "images"
 javascripts_dir = "js"
 fonts_dir = "fonts"
 
@@ -22,5 +22,4 @@ color_output = false
 # project again passing --syntax sass, or you can uncomment this:
 # preferred_syntax = :sass
 # and then run:
-# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-preferred_syntax = :scss
+# sass-convert -R --from scss --to sass css scss && rm -rf sass && mv scss sass
