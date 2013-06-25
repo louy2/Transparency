@@ -69,25 +69,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: 400;
 }
 
-/* line 8, style.sass */
-.poster-title {
-  float: right;
-}
 /* line 10, style.sass */
+.en font {
+  family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  weight: 300;
+}
+
+/* line 14, style.sass */
+.poster-title {
+  align-self: right;
+}
+/* line 16, style.sass */
 .poster-title .title-text {
   text-align: right;
   font-size: 5em;
   font-family: sans-serif;
   margin-right: 0.1em;
 }
-/* line 18, style.sass */
+/* line 24, style.sass */
 .poster-title .en {
   font-size: 8em;
   font-family: "Tangerine", serif;
 }
-/* line 22, style.sass */
+/* line 28, style.sass */
 .poster-title .cn {
-  vertical-align: true;
   font-family: TianYanKai, sans-serif;
   letter-spacing: 0.2em;
+}
+
+/* line 32, style.sass */
+.slogan {
+  align-self: left;
+  margin-top: 5em;
+  margin-left: 3em;
+}
+/* line 37, style.sass */
+.slogan .slogan-text {
+  font-size: 3em;
+}
+/* line 39, style.sass */
+.slogan .en {
+  font-size: 5em;
+  font-family: "Tangerine", serif;
+}
+/* line 43, style.sass */
+.slogan .cn {
+  font-family: TianYanKai, sans-serif;
+  letter-spacing: 0.2em;
+}
+
+/* line 47, style.sass */
+.description {
+  margin-left: 3em;
+  margin-top: 10em;
+  width: 50%;
 }
