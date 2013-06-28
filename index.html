@@ -1,103 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
     <title>
-      Count Down to Transparency
+      Transparency
     </title>
-    <link href='http://fonts.googleapis.com/css?family=Nova+Mono' rel='stylesheet' type='text/css'>
-    <style>
-      body { background-color: lightblue; }
-      .site-logo { width: 100%; }
-      .count-down-container
-      {
-        text-align: center;
-        color: white;
-        text-shadow: black 2px 3px 5px;
-        font-family: 'Nova Mono', cursive;
-        font-size: 2em;
-      }
-    </style>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header>
-      <img src="img/Transparency-LogoW.png" alt="Transparency" class="site-logo">
-    </header>
-    <div class="count-down-container">
-      <h1>
-        <span id="day-num"></span> Days
-        <span id="hour-num"></span> Hours
-        <span id="min-num"></span> Minutes
-        <span id="sec-num"></span> Seconds
-      </h1>
+    <div class="wrapper">
+      <header>
+        <img class="site-logo" src="">
+        <h1 class="site-title en">
+          Transparency
+        </h1>
+        <h1 class="site-title cn">
+          明·度
+        </h1>
+        <nav>
+          <ul class="navbar" role="navigation">
+            <li>
+              <a href="#professors">Professors</a>
+            </li>
+            <li>
+              <a href="#articles">Articles</a>
+            </li>
+            <li>
+              <a href="#activities">Activities</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="headline">
+        <img class="headline-image" src="">
+        <h2 class="headline-title"></h2>
+        <p class="headline-summary"></p>
+      </div>
+      <section class="professors">
+        <h2 class="section-title">
+          Professors
+        </h2>
+        <ul class="professor-list">
+          <li class="content-block" id="professor">
+            <img class="professor-image" src="">
+            <h2 class="professor-name">
+              Aye
+            </h2>
+            <p class="professor-intro">
+              Aye is a good professor
+            </p>
+          </li>
+          <li class="professor">
+            <img class="professor-image" src="">
+            <h2 class="professor-name">
+              Bai
+            </h2>
+            <p class="professor-intro">
+              Bai is a good professor
+            </p>
+          </li>
+          <li class="professor">
+            <img class="professor-image" src="">
+            <h2 class="professor-name">
+              Chi
+            </h2>
+            <p class="professor-intro">
+              Chi is a good professor
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="content-block" id="articles">
+        <h2 class="section-title">
+          Articles
+        </h2>
+        <ul class="article-list">
+          <li class="article">
+            <img class="article-cover" src="">
+            <h3 class="article-title">
+              Apocalypse
+            </h3>
+            <p class="article-sum">
+              Apocalypse is a disaster
+            </p>
+          </li>
+          <li class="article">
+            <img class="article-cover" src="">
+            <h3 class="article-title">
+              Breaucracy
+            </h3>
+            <p class="article-sum">
+              Breaucracy is a disaster
+            </p>
+          </li>
+          <li class="article">
+            <img class="article-cover" src="">
+            <h3 class="article-title">
+              Catastrophe
+            </h3>
+            <p class="article-sum">
+              Catastrophe is a disaster
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="content-block" id="activities">
+        <h2 class="section-title">
+          Activities
+        </h2>
+        <ul class="activities-list">
+          <li class="activity">
+            <img alt="" class="activity-cover" src="">
+            <h3 class="activity-title">
+              Get Up!
+            </h3>
+            <p class="activity-sum">
+              Fight Disasters
+            </p>
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <p class="copyright">
+          Designed by <a href="">@FRIdSUN</a>. All rights reserved.
+        </p>
+      </footer>
     </div>
-      
-    <!-- Countdown Script -->
-    <script type="text/javascript">
-    // Originally from http://www.nowamagic.net/librarys/veda/detail/421
-    // Changed to fit needs at Transparency by Lou Yufan
-    // 
-    startclock();
-    var timerID = null;
-    var timerRunning = false;
-    function showtime() {
-      Today = new Date();
-      var NowMonth = Today.getMonth();
-      var NowDate = Today.getDate();
-      var NowHour = Today.getHours();
-      var NowMinute = Today.getMinutes();
-      var NowSecond = Today.getSeconds();
-
-      Today = null;
-      Hourleft = 23 - NowHour
-      Minuteleft = 59 - NowMinute
-      Secondleft = 59 - NowSecond
-      Monthleft = 6 - NowMonth
-      Dateleft = 3 - NowDate
-      if (Secondleft<0)
-      {
-        Secondleft=60+Secondleft;
-        Minuteleft=Minuteleft-1;
-      }
-      if (Minuteleft<0)
-      {
-        Minuteleft=60+Minuteleft;
-        Hourleft=Hourleft-1;
-      }
-      if (Hourleft<0)
-      {
-        Hourleft=24+Hourleft;
-        Dateleft=Dateleft-1;
-      }
-      if (Dateleft<0)
-      {
-        Dateleft=31+Dateleft;
-        Monthleft=Monthleft-1;
-      }
-      if (Monthleft<0)
-      {
-        Monthleft=12+Monthleft;
-      }
-      
-      document.getElementById("day-num").innerHTML = Dateleft
-      document.getElementById("hour-num").innerHTML = Hourleft
-      document.getElementById("min-num").innerHTML = Minuteleft
-      document.getElementById("sec-num").innerHTML = Secondleft
-      timerID = setTimeout("showtime()",1000);
-      timerRunning = true;
-    }
-    var timerID = null;
-    var timerRunning = false;
-    function stopclock () {   
-      if(timerRunning)   
-      clearTimeout(timerID);   
-      timerRunning = false;   
-    }   
-    function startclock () {   
-      stopclock();   
-      showtime();   
-    }   
-
-    </script>
   </body>
 </html>
