@@ -65,112 +65,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Variables */
 /* Use border-box */
-/* line 9, style.sass */
+/* line 11, style.sass */
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* General Style */
-/* line 14, style.sass */
+/* line 16, style.sass */
 body {
-  background-color: #eeeeee;
+  background-color: white;
   margin: 0;
-  color: #333333;
+  color: white;
+  text-shadow: black 1px 1px 1px;
   font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 
 /* Head Banner */
-/* line 21, style.sass */
+/* line 24, style.sass */
 header {
-  margin: 0;
-  height: 8em;
-  background-color: lightblue;
+  background-color: #99eeff;
+  height: 30em;
+  padding: 2em 3em;
 }
 
-/* line 25, style.sass */
+/* line 28, style.sass */
 .site-logo {
-  width: 50%;
-  margin: 1em 0em 1em 2em;
+  height: 10em;
+  /* logo img */
   background-image: url("../img/Transparency-Logo.png");
-  background-size: 5em;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-/* line 30, style.sass */
-.navbar {
-  float: right;
-  width: auto;
-  margin-right: 1.2em;
-}
-/* line 34, style.sass */
-.navbar li {
-  display: inline-block;
-  padding: 0.5em 0.5em;
-  background-color: #ffaa00;
-}
-/* line 38, style.sass */
-.navbar li a {
-  text-decoration: none;
-}
-
-/* line 40, style.sass */
+/* Title Style */
+/* line 36, style.sass */
 .site-title {
-  float: left;
-  width: auto;
-  margin: 1em 0 0 0.2em;
-  text-align: left;
-  font-size: 2.5em;
-  font-family: sans-serif;
+  margin-left: 5em;
+  font-size: 2em;
+  color: white;
+  text-shadow: black 1px 1px 2px;
 }
 
-/* line 48, style.sass */
-section {
-  max-width: 960px;
-  width: 80%;
-  margin: 2em auto;
-}
-
-/* line 52, style.sass */
-.section-title {
-  text-align: left;
-  color: #cc00cc;
-  font-size: 1.5em;
-  margin-left: 0.5em;
-}
-
-/* line 57, style.sass */
-.professors {
-  background-color: white;
-}
-/* line 59, style.sass */
-.professors .professor-list {
-  text-align: center;
-}
-/* line 61, style.sass */
-.professors .professor {
-  display: inline-block;
-  text-align: center;
-  margin: 0 1em;
-}
-/* line 65, style.sass */
-.professors .professor .professor-image {
-  width: 2em;
-  height: 2em;
-}
-
-/* line 68, style.sass */
-.articles {
-  margin: 2em;
-}
-
-/* line 70, style.sass */
-.article {
-  display: block;
-}
-
-/* line 73, style.sass */
-footer {
-  text-align: center;
-  font-size: 0.8em;
-  color: #aaaaaa;
+/* Email Form */
+/* line 43, style.sass */
+.emfield {
+  float: right;
+  text-align: right;
+  font-size: 1.2em;
 }
