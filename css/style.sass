@@ -2,28 +2,58 @@
 
 @import "compass/reset"
 
+/* Variables */
+$bodybgc: #eeeeee
+
 /* Use border-box */
 *
   -moz-box-sizing: border-box
   box-sizing: border-box
 
+/* General Style */
 body
-  background-color: lightblue
+  background-color: $bodybgc
   margin: 0
+  color: #333
+  font-family: Helvetica, Verdana, Arial, sans-serif
+
+/* Head Banner */
+header
+  margin: 0
+  height: 8em
+  background-color: lightblue
+.site-logo
+  width: 50%
+  margin: 1em 0em 1em 2em
+  background-image: url("../img/Transparency-Logo.png")
+  background-size: 5em
 .navbar
-  text-align: center
+  float: right
+  width: auto
+  margin-right: 1.2em
   li
     display: inline-block
-    margin: 0 2em
+    padding: 0.5em 0.5em
+    background-color: #ffaa00
+    a
+      text-decoration: none
 .site-title
-  text-align: center
+  float: left
+  width: auto
+  margin: 1em 0 0 0.2em
+  text-align: left
   font:
-    size: 3em
+    size: 2.5em
     family: sans-serif
-  background-color: #66cccc
-  color: white
+section
+  max-width: 960px
+  width: 80%
+  margin: 2em auto
 .section-title
-  text-align: center
+  text-align: left
+  color: #cc00cc
+  font-size: 1.5em
+  margin-left: 0.5em
 .professors
   background-color: white
   .professor-list
@@ -42,3 +72,5 @@ body
   
 footer
   text-align: center
+  font-size: 0.8em
+  color: #aaaaaa

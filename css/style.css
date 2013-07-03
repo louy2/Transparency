@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,117 +20,157 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Program Files (x86)/Prepros/ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Program Files (x86)/Prepros/ruby_gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
+/* Variables */
 /* Use border-box */
-/* line 6, style.sass */
+/* line 9, style.sass */
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 10, style.sass */
+/* General Style */
+/* line 14, style.sass */
 body {
-  background-color: lightblue;
+  background-color: #eeeeee;
   margin: 0;
+  color: #333333;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 
-/* line 13, style.sass */
-.navbar {
-  text-align: center;
-}
-/* line 15, style.sass */
-.navbar li {
-  display: inline-block;
-  margin: 0 2em;
-}
-
-/* line 18, style.sass */
-.site-title {
-  text-align: center;
-  font-size: 3em;
-  font-family: sans-serif;
-  background-color: #66cccc;
-  color: white;
+/* Head Banner */
+/* line 21, style.sass */
+header {
+  margin: 0;
+  height: 8em;
+  background-color: lightblue;
 }
 
 /* line 25, style.sass */
-.section-title {
-  text-align: center;
+.site-logo {
+  width: 50%;
+  margin: 1em 0em 1em 2em;
+  background-image: url("../img/Transparency-Logo.png");
+  background-size: 5em;
 }
 
-/* line 27, style.sass */
+/* line 30, style.sass */
+.navbar {
+  float: right;
+  width: auto;
+  margin-right: 1.2em;
+}
+/* line 34, style.sass */
+.navbar li {
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  background-color: #ffaa00;
+}
+/* line 38, style.sass */
+.navbar li a {
+  text-decoration: none;
+}
+
+/* line 40, style.sass */
+.site-title {
+  float: left;
+  width: auto;
+  margin: 1em 0 0 0.2em;
+  text-align: left;
+  font-size: 2.5em;
+  font-family: sans-serif;
+}
+
+/* line 48, style.sass */
+section {
+  max-width: 960px;
+  width: 80%;
+  margin: 2em auto;
+}
+
+/* line 52, style.sass */
+.section-title {
+  text-align: left;
+  color: #cc00cc;
+  font-size: 1.5em;
+  margin-left: 0.5em;
+}
+
+/* line 57, style.sass */
 .professors {
   background-color: white;
 }
-/* line 29, style.sass */
+/* line 59, style.sass */
 .professors .professor-list {
   text-align: center;
 }
-/* line 31, style.sass */
+/* line 61, style.sass */
 .professors .professor {
   display: inline-block;
   text-align: center;
   margin: 0 1em;
 }
-/* line 35, style.sass */
+/* line 65, style.sass */
 .professors .professor .professor-image {
   width: 2em;
   height: 2em;
 }
 
-/* line 38, style.sass */
+/* line 68, style.sass */
 .articles {
   margin: 2em;
 }
 
-/* line 40, style.sass */
+/* line 70, style.sass */
 .article {
   display: block;
 }
 
-/* line 43, style.sass */
+/* line 73, style.sass */
 footer {
   text-align: center;
+  font-size: 0.8em;
+  color: #aaaaaa;
 }
