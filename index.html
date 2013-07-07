@@ -1,103 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Lou Yufan @ RPI">
+    <meta name="description" content="Transparency is a student-created magazine focused on basic social science matters.">
+    <meta name="keywords" content="student, society, culture, science, ethics, magazine">
     <title>
-      Count Down to Transparency
+      Transp  arency
     </title>
-    <link href='http://fonts.googleapis.com/css?family=Nova+Mono' rel='stylesheet' type='text/css'>
-    <style>
-      body { background-color: lightblue; }
-      .site-logo { width: 100%; }
-      .count-down-container
-      {
-        text-align: center;
-        color: white;
-        text-shadow: black 2px 3px 5px;
-        font-family: 'Nova Mono', cursive;
-        font-size: 2em;
-      }
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
     </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
   </head>
   <body>
-    <header>
-      <img src="img/Transparency-LogoW.png" alt="Transparency" class="site-logo">
-    </header>
-    <div class="count-down-container">
-      <h1>
-        <span id="day-num"></span> Days
-        <span id="hour-num"></span> Hours
-        <span id="min-num"></span> Minutes
-        <span id="sec-num"></span> Seconds
-      </h1>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button> <a class="brand" href="#">Transparency</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <!-- Disable nav
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              -->
+              <!-- Disable Dropdown
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Subscribe</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Email</a>
+                  </li>
+                  <li>
+                    <a href="#">WeChat</a>
+                  </li>
+                  <li>
+                    <a href="#">Something else here</a>
+                  </li>
+                  <li class="nav-header">Nav header
+                  </li>
+                  <li>
+                    <a href="#">Separated link</a>
+                  </li>
+                  <li>
+                    <a href="#">One more separated link</a>
+                  </li>
+                </ul>
+              </li>
+              -->
+            </ul>
+            <!-- Disable Form
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email"> <input class="span2" type="password" placeholder="Password"> <button type="submit" class="btn">Sign in</button>
+            </form>
+            -->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
-      
-    <!-- Countdown Script -->
-    <script type="text/javascript">
-    // Originally from http://www.nowamagic.net/librarys/veda/detail/421
-    // Changed to fit needs at Transparency by Lou Yufan
-    // 
-    startclock();
-    var timerID = null;
-    var timerRunning = false;
-    function showtime() {
-      Today = new Date();
-      var NowMonth = Today.getMonth();
-      var NowDate = Today.getDate();
-      var NowHour = Today.getHours();
-      var NowMinute = Today.getMinutes();
-      var NowSecond = Today.getSeconds();
-
-      Today = null;
-      Hourleft = 23 - NowHour
-      Minuteleft = 59 - NowMinute
-      Secondleft = 59 - NowSecond
-      Monthleft = 6 - NowMonth
-      Dateleft = 3 - NowDate
-      if (Secondleft<0)
-      {
-        Secondleft=60+Secondleft;
-        Minuteleft=Minuteleft-1;
-      }
-      if (Minuteleft<0)
-      {
-        Minuteleft=60+Minuteleft;
-        Hourleft=Hourleft-1;
-      }
-      if (Hourleft<0)
-      {
-        Hourleft=24+Hourleft;
-        Dateleft=Dateleft-1;
-      }
-      if (Dateleft<0)
-      {
-        Dateleft=31+Dateleft;
-        Monthleft=Monthleft-1;
-      }
-      if (Monthleft<0)
-      {
-        Monthleft=12+Monthleft;
-      }
-      
-      document.getElementById("day-num").innerHTML = Dateleft
-      document.getElementById("hour-num").innerHTML = Hourleft
-      document.getElementById("min-num").innerHTML = Minuteleft
-      document.getElementById("sec-num").innerHTML = Secondleft
-      timerID = setTimeout("showtime()",1000);
-      timerRunning = true;
-    }
-    var timerID = null;
-    var timerRunning = false;
-    function stopclock () {   
-      if(timerRunning)   
-      clearTimeout(timerID);   
-      timerRunning = false;   
-    }   
-    function startclock () {   
-      stopclock();   
-      showtime();   
-    }   
-
-    </script>
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>
+          Transparency
+        </h1>
+        <hr>
+        <p>
+          Transparency is a magazine focused on giving high school students some insights into popular social matters. 
+        </p>
+      </div><!-- Example row of columns -->
+      <div class="row">
+        <div class="media span6">
+          <img class="media-object pull-left" src="img/qrcode_for_gh_24d91d672bf6_258.jpg" alt="">
+          <h2 class="media-heading">
+            WeChat QRCode
+          </h2>
+          <p>
+            Please scan the QRCode to get the latest updates on the magazine from your WeChat app.
+          </p>
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <p>
+          © Company 2013
+        </p>
+      </footer>
+    </div><!-- /container -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
   </body>
 </html>
